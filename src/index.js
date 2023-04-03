@@ -1,17 +1,39 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import { AppProvider } from './context'
-import { BrowserRouter as Router } from 'react-router-dom'
-ReactDOM.render(
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import { AppProvider } from './context';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import { createRoot } from 'react-dom/client';
+
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppProvider>
       <Router>
         <App />
       </Router>
     </AppProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+  </React.StrictMode>
+);
+
+
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import './index.css'
+// import App from './App'
+// import { AppProvider } from './context'
+// import { BrowserRouter as Router } from 'react-router-dom'
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <AppProvider>
+//       <Router>
+//         <App />
+//       </Router>
+//     </AppProvider>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// )
 
